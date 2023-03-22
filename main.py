@@ -10,7 +10,7 @@ selected_node = [0] * len(G)
 no_edge = 0
 selected_node[0] = True
 
-# printing for edge and weight
+
 
 print("Min\n")
 print("Edge : Weight\n")
@@ -24,7 +24,7 @@ while (no_edge < N - 1):
         if selected_node[m]:
             for n in range(N):
                 if ((not selected_node[n]) and G[m][n]):
-                    # not in selected and there is an edge
+
                     if minimum > G[m][n]:
                         minimum = G[m][n]
                         a = m
@@ -35,7 +35,7 @@ while (no_edge < N - 1):
 
 print("\nMax\n")
 print("Edge : Weight\n")
-selected_node = [0, 0, 0, 0, 0, 0, 0, 0]
+selected_node = [0] * len(G)
 no_edge = 0
 selected_node[0] = True
 
@@ -49,7 +49,7 @@ while (no_edge < N - 1):
         if selected_node[m]:
             for n in range(N):
                 if ((not selected_node[n]) and G[m][n]):
-                    # not in selected and there is an edge
+
                     if maximum < G[m][n]:
                         maximum = G[m][n]
                         a = m
